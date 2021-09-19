@@ -5,10 +5,11 @@
 
 int main()
 {
-	// 10진수는 숫자 그대로 표기하면 되고, 8진수는 숫자 앞에 0을 붙이고, 16진수는 0x를 븥
-    printf("%d\n", 19);        // 19: 10진 정수 리터럴
-    printf("0%o\n", 017);      // 017: 8진 정수 리터럴
-    printf("0x%X\n", 0x1F);    // 0x1F: 16진 정수 리터럴
+    const int con1 = 1;         // 상수. 선언과 동시에 초기화
+    const float con2 = .2f;    // 상수. 선언과 동시에 초기화
+    const char con3 = 'a';      // 상수. 선언과 동시에 초기화
+
+    printf("%d %f %c\n", con1, con2, con3);    // 1 0.100000 a
 
     return 0;
-}임
+}
