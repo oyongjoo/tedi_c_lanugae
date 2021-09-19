@@ -3,7 +3,11 @@
 
 int main()
 {
-    printf("H%cllo, %s %d %Le\n", 'e', "world!", 8, 4.9e-302L);
+    const unsigned long long con1 = 10;
+    const float con2 = 3.2f;
+    const char con3 = 't';
+    
+    printf("%llu %f %c\n", con1, con2, con3);
 
     return 0;
 }
