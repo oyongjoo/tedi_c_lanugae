@@ -2,10 +2,7 @@
 #include <stdio.h>
 
 int main() {
-	char c1;
-	
-	printf("문자를 입력하세요: ");
-	scanf("%c", &c1);
+	char c1 = getchar(); // 문자 하나를 입력 받음
 	
 	printf("%c\n", c1);
 	
