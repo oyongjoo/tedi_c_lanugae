@@ -1,11 +1,13 @@
 #include <stdio.h>
 
 int main() {
-	int num1 = 1;
+	float num1 = 2.1f;
+	float num2 = 2.1f;
 	
 	num1++;
+	num2--;
 	
-	printf("%d\n", num1);
+	printf("%f %f\n", num1, num2);
 	
 	return 0;
 }
