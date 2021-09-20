@@ -1,22 +1,58 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void swapNumber(int *first, int *second) {
-	int temp;
-	
-	temp = *first;
-	*first = *second;
-	*second = temp;
+enum TYPE {
+	TYPE_CHAR,
+	TYPE_INT,
+	TYPE_FLOAT
+};
+
+void swapValue(void *ptr1, void *ptr2, enum TYPE t) 
+{
+	switch (t) {
+		case TYPE_CHAR:
+		{
+			char temp;
+			temp = *(char *)ptr1;
+			*(char *)ptr1 = *(char *)ptr2;
+			*(char *)ptr2 = temp;
+			break;
+		}
+		case TYPE_INT:
+		{
+			int temp;
+			temp = *(int *)ptr1;
+			*(int *)ptr1 = *(int *)ptr2;
+			*(int *)ptr2 = temp;
+			break;
+		}
+		case TYPE_FLOAT:
+		{
+			float temp;
+			temp = *(float *)ptr1;
+			*(float *)ptr1 = *(float *)ptr2;
+			*(float *)ptr2 = temp;
+			break;
+		}			
+	}
 }
 
 int main(int argc, char *argv[]) {
+	char c1 = 'a';
+	char c2 = 'b';
+	
+	swapValue(&c1, &c2, TYPE_CHAR);
+	printf("%c, %c\n", c1, c2); 
+	
 	int num1 = 10;
 	int num2 = 20;
+	swapValue(&num1, &num2, TYPE_INT);
+	printf("%d, %d\n", num1, num2);
 	
-	swapNumber(&num1, &num2); // 변수 num1과 num2를 넣어줌
-	
-	printf("%d, %d\n", num1, num2); // 10 20: swapNumber 함수와는 상관없이 
-									// 처음 저장한 10과 20이 출력됨
+	float num3 = 1.234567f;
+	float num4 = 7.654321f;
+	swapValue(&num3, &num4, TYPE_FLOAT);
+	printf("%f, %f\n", num3, num4);
 	
 	return 0;
 }
