@@ -1,11 +1,13 @@
 #include <stdio.h>
 
 int main() {
-	float num1, num2;
+	int num1 = 1, num2 = 1;
 	
-	num1 = 1.0f + 0.456789f;
-	num2 = 1.0f - 0.456789f;
+	num1 += 2;		// num1에 2를 더한 뒤 다시 num1에 저장(2를 증가시킴)
+	num2 -= 2;		// num2에 2를 뺀 뒤 다시 num2에 저장(2를 감소시킴)
 	
-	printf("%f\n", num1);
-	printf("%f\n", num2);
+	printf("%d\n", num1);
+	printf("%d\n", num2);
+	
+	return 0;
 }
