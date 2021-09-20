@@ -1,13 +1,17 @@
 #include <stdio.h>
 
-int main() {
-	char c1 = 'b';
-	char c2 = 'b';
-	
-	c1++;	// 문자 자료형 변수의 값을 1 증가시킴, 'c'로 바뀜
-	c2--;	// 문자 자료형 변수의 값을 1 감소시킴, 'a'로 바뀜
-	
-	printf("%c %c\n", c1, c2);		// c a: b에서 1 증가시켰으므로 c, b에서 1 감소시켰으므로 a
-	
-	return 0;
+int main() 
+{
+    int num1 = 2;
+    int num2 = 2;
+    int num3;
+    int num4;
+
+    num3 = num1++;    // num1의 값을 num3에 할당한 뒤 num1의 값을 1 증가시킴
+    num4 = num2--;    // num2의 값을 num4에 할당한 뒤 num2의 값을 1 감소시킴
+
+    printf("%d %d\n", num3, num4);    // 2 2
+    printf("%d %d\n", num1, num2);
+
+    return 0;
 }
