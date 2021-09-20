@@ -2,9 +2,11 @@
 #include <stdio.h>
 
 int main() {
-	char c1 = 'a';
+	int num1, num2, num3;
 	
-	putchar(c1);
+	printf("정수 세 개를 입력하세요: ");
+	scanf("%d %d %d", &num1, &num2, &num3);
 	
+	printf("%d\n%d\n%d\n", num1, num2, num3);
 	return 0;
 }
