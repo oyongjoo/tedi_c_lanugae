@@ -3,12 +3,11 @@
 
 int main()
 {
-    const unsigned long long con1 = 10;
-    //const float con2 = 3.2f;
-    const double con2 = 3.2;
-    const char con3 = 't';
-    
-    printf("%llu %f %c\n", con1, con2, con3);
-
+    const long double con1 = -2.225074e-308L;
+    const int con2 = 0x1285;
+    const long long con3 = 9223372036854775807LL;
+ 
+    printf("%Le 0x%x %lld\n", con1, con2, con3);
+ 
     return 0;
 }
