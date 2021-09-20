@@ -3,12 +3,12 @@
 #include <stdlib.h>
 
 int main(int argc, char *argv[]) {
-	int num1, num2;
+	float num1;
 	
-	printf("정수를 두 개 입력하세요: ");
-	scanf("%d %d", &num1, &num2);	// 값을 두 개 입력받아서 변수 두 개에 저장
+	printf("실수를 입력하세요: ");
+	scanf("%f", &num1);		// 실수를 입력받아서 변수에 저장
 	
-	printf("%d %d\n", num1, num2);	// 변수의 내용을 출
+	printf("%f\n", num1);	// 변수의 내용을 출력
 	
 	return 0;
 }
