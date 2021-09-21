@@ -3,8 +3,18 @@
 
 int main() 
 {
-	// C99 표준에서 나머지 연산자는 a == (a / b) * b + a % b로 
-	// 정의하고 있습니다. 따라서 이 식에 앞의 값들을 대입해보면 왜 그런지 알 수 있습니다.
-	// 결론적으로 a % b를 연산하면 결과는 a의 부호를 따릅니다(b의 부호는 무시).
-	printf("%d\n", 5%(-3));
+	int num1;
+	scanf("%d", &num1);
+	
+	printf("%d ", num1%10);
+	num1 /= 10;
+	printf("%d ", num1%10);
+	num1 /= 10;
+	printf("%d ", num1%10);
+	num1 /= 10;
+	printf("%d ", num1%10);
+	num1 /= 10;
+	printf("%d", num1%10);
+	
+	return 0;
 }
