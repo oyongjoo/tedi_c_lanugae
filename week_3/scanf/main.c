@@ -1,20 +1,20 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
+#define _USE_MATH_DEFINES
+#include <math.h>
+#ifndef M_PI
+#define M_PI 3.14159265358979323846
+#endif
 
 int main() 
 {
-    int num1 = 2;
-    int num2 = 8;
-    int num3;
-    int num4;
-
-    num1++;
-    num3 = --num1;
+    float diameter;
+    float radius;
+    float area;
     
-    --num2;
-    num4 = num2++;
-
-    printf("%d %d\n", num3, num4);    // 2 7
-    printf("%d %d\n", num1, num2);
-
-    return 0;
+    scanf("%f", &diameter);
+    
+    radius = diameter / 2;
+    area = radius*radius*M_PI;
+    printf("%f\n", area);
 }
