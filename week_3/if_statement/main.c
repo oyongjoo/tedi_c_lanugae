@@ -1,11 +1,20 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
-int main() {
-	int num;
-	scanf("%d", &num);
-	if (num1 < 18) {
-		printf("청소년 관람 불가";)
-	}
-	return 0;
+int main() 
+{
+    char ch;
+    
+    scanf("%c", &ch);
+    
+    if (ch == 'a') 
+    {
+        printf("a입니다.");
+    }
+    else
+    {
+        printf("a가 아닙니다.");
+    }
+    
+    return 0;
 }
