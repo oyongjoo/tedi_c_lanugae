@@ -2,11 +2,14 @@
 #include <stdio.h>
 
 int main() {
-    int num1;
+    int time;
+    scanf("%d", &time);
     
-    scanf("%d", &num1);
+    int hour = time / 3600;
+    int min = (time%3600)/60;
+    int sec = (time%3600)%60;
     
-    printf("%d\n", (num1 != 7) ? 1 : 2);
+    printf("%d 시간 %d 분 %d 초\n", hour, min, sec);
         
     return 0;
 }
