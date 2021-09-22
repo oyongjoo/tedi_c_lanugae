@@ -1,12 +1,11 @@
 #include <stdio.h>
 
 int main() {
-	unsigned char num1 = 162;	// 1010 0010
-	unsigned char num2;
+	unsigned char num1 = 3;		// 0000 0011
+	unsigned char num2 = 24;	// 0001 1000
 	
-	num2 = ~num1;
-	
-	printf("%u\n", num2);	// 93: 0101 1101: num1의 비트 값을 뒤집
+	printf("%u\n", num1 << 3);	// 24: 0001 1000: num1의 비트 값을 왼쪽으로 3번 이동
+	printf("%u\n", num2 >> 2);	//  6: 0000 0110: num2의 비트 값을 오른쪽으로 2번 이동
 	
 	return 0;
 }
