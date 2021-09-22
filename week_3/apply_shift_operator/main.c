@@ -1,13 +1,13 @@
 #include <stdio.h>
+#include <stdbool.h>
  
 int main()
 {
-	int num1;
-	int num2 = 3;
+	bool b1;
 	
-	num1 = 10 + 2 / (5-3) * ++num2;
+	b1 = (false || false) && !false || false; 	// 논리 연산자의 우선순위는 !, &&, || 순
 	
-	printf("%d \n", num1);
-		
+	printf("%d\n", b1);
+	
     return 0;
 }
