@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdbool.h>
+#include <stdbool.h>    // bool, true, false가 정의된 헤더 파일
 
 #define T "true"
 #define F "false"
