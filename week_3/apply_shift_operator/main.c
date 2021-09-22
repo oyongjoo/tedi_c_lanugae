@@ -1,33 +1,19 @@
+#define __USE_MINGW_ANSI_STDIO 1 // Dev-C++(MinGW)에서 %hhu를 사용하기 위한 설정
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
  
 int main()
 {
-	unsigned char flag = 7;		// 7: 0000 0111
+	unsigned char flag = 16;
+	unsigned char num1, num2;
 	
-	flag ^= 2;		// 0000 0010 마스크와 비트 XOR로 일곱 번째 비트를 토글
-	flag ^= 8;		// 0000 1000 마스크와 비트 XOR로 다섯 번째 비트를 토글
+	scanf("%hhu %hhu", &num1, &num2);
 	
-	printf("%u\n", flag);		// 5: 0000 0101
+	flag |= num1 << 3;
+	flag &= ~(num2 >> 2);
+	flag ^= 1 << 7;
 	
-	if (flag & 1) 	// & 연산자로 0000 0001 비트가 켜져 있는지 확인
-		printf("0000 0001은 켜져 있음.\n");
-	else
-		printf("0000 0001은 꺼져 있음.\n");
-	
-	if (flag & 2) 	// & 연산자로 0000 0010 비트가 켜져 있는지 확인
-		printf("0000 0010은 켜져 있음.\n");
-	else
-		printf("0000 0010은 꺼져 있음.\n");
-
-	if (flag & 4) 	// & 연산자로 0000 0100 비트가 켜져 있는지 확인
-		printf("0000 0100은 켜져 있음.\n");
-	else
-		printf("0000 0100은 꺼져 있음.\n");
-		
-	if (flag & 8)    // & 연산자로 0000 1000 비트가 켜져 있는지 확인
-        printf("0000 1000은 켜져 있음\n");
-    else
-        printf("0000 1000은 꺼져 있음\n");
+	printf("%u\n", flag);
 		
     return 0;
 }
