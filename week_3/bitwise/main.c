@@ -3,17 +3,11 @@
 
 int main()
 {
-    unsigned int num1;
-    unsigned int num2;
-    
-    scanf("%u %u", &num1, &num2);
-    
-//    printf("%u\n", num1 ^ num2);
-//    printf("%u\n", num1 | num2);
-//    printf("%u\n", num1 & num2);
-//    printf("%u\n", ~num1);
+	unsigned long long num1;
 
-	printf("%u\n%u\n%u\n%u\n", num1^num2, num1|num2, num1&num2, ~num1);
+    scanf("%llu", &num1);
+    
+    printf("%llu", num1 << 20 >> 4);
     
     return 0;
 }
