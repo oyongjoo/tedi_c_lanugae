@@ -12,11 +12,11 @@ int main()
     {
         if (average >= 85) 
         {
-            printf("합격입니다.\n");
+            printf("합격\n");
         }
         else
         {
-            printf("불합격입니다.\n");
+            printf("불합격\n");
         }
     }
     else
