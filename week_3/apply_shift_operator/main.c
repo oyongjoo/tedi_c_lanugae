@@ -6,9 +6,9 @@ int main()
     int num2 = 2;
     int num3;
 
-    num3 = num1 << 2 + num2 << 1;    // <<º¸´Ù +ÀÇ ¿ì¼±¼øÀ§°¡ ³ôÀ½ -> num3 = num1 << 4 << 1
+    num3 = (num1 << 2) + (num2 << 1);    // +º¸´Ù << ¿¬»êÀ» ¸ÕÀúÇÏ±â À§ÇØ °ıÈ£·Î ¹­¾îÁÜ
 
-    printf("%d\n", num3);    // 32
+    printf("%d\n", num3);    // 8
     
     return 0;
 }
