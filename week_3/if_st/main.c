@@ -3,26 +3,24 @@
 
 int main() 
 {
-    int korean, english, mathematics, science;
+    int balance = 10000;    // 교통카드 잔액
+    int age;
+
+    scanf("%d", &age);
     
-    scanf("%d %d %d %d", &korean, &english, &mathematics, &science);
-    
-    int average = (korean + english + mathematics + science) / 4;
-    if ( (korean >= 0 && korean <= 100) && (english >= 0 && english <= 100) && (mathematics >= 0 && mathematics <= 100) && (science >= 0 && science <= 100))
-    {
-        if (average >= 85) 
-        {
-            printf("합격\n");
-        }
-        else
-        {
-            printf("불합격\n");
-        }
-    }
-    else
-    {
-        printf("잘못된 점수\n");
-    }
+    if (age >= 7 &&  age <= 12) 
+	{
+	    balance -= 450;
+	    printf("450원이 차감되었습니다.\n");
+	} else if (age >= 13 && age <= 18) {
+	    balance -= 720;
+	    printf("720원이 차감되었습니다.\n");
+	} else if (age >= 19) {
+	    balance -= 1200;
+	    printf("1200원이 차감되었습니다.\n");
+	}
+	
+	printf("%d\n", balance);
     
     return 0;
 }
