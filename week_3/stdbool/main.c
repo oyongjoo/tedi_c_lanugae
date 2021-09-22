@@ -1,15 +1,19 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+#define T "true"
+#define F "false"
 
 int main() {
 	bool b1 = true;
+	bool b2 = false;
 	
-	if (b1 == true)
-		printf("Âü\n", b1);
-	else
-		printf("°ÅÁþ\n", b1);
-		
+	printf(b1 ? T:F);
+	printf("\n");
+	printf(b2 ? "true":"false");	
+	printf("\n");	
+	
+	printf("%s\n", b1?T:F);
+	printf("%s\n", b2?T:F);
 	return 0;
 }
