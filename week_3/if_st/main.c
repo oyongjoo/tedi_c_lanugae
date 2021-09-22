@@ -1,14 +1,15 @@
-#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
 int main() 
 {
-    int num1 = 5;
-    int num2;
+    float num1 = 0.0f;
+    float num2 = 0.1f;
     
-    num2 = (num1 == 10) ? 100:200; // 삼항연산자: num1이 참이면 num2에 100을 할당, 거짓이면 num2에 200을 할당
-    
-    printf("%d\n", num2);
-    
-    return 0;
+    for (int i = 0; i<10; i++) {
+		num1 = num1 + num2;
+	}
+	
+	printf("%.15f\n", num1);
+	
+	return 0;
 }
