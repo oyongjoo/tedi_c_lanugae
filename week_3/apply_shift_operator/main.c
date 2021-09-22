@@ -1,14 +1,13 @@
-#define __USE_MINGW_ANSI_STDIO 1 // Dev-C++(MinGW)에서 %hhu를 사용하기 위한 설정
-#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
  
 int main()
 {
-	char *str;
+	int num1;
+	int num2 = 3;
 	
-	scanf("%[^\n]s", str);
-		
-	printf("%s\n", str);
+	num1 = 10 + 2 / (5-3) * ++num2;
+	
+	printf("%d \n", num1);
 		
     return 0;
 }
