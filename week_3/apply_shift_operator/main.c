@@ -4,16 +4,11 @@
  
 int main()
 {
-	unsigned char flag = 16;
-	unsigned char num1, num2;
+	char *str;
 	
-	scanf("%hhu %hhu", &num1, &num2);
-	
-	flag |= num1 << 3;
-	flag &= ~(num2 >> 2);
-	flag ^= 1 << 7;
-	
-	printf("%u\n", flag);
+	scanf("%[^\n]s", str);
+		
+	printf("%s\n", str);
 		
     return 0;
 }
