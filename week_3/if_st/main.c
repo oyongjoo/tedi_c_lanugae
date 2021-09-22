@@ -9,7 +9,9 @@ int main()
 		num1 = num1 + num2;
 	}
 	
-	printf("%.15f\n", num1);	// 1.000000119209290: 1.0이 나와야 하지만 반올림 오차 발생
+	// num1: 0.100000001490116
+	if (num1 == 1.0f) printf("true\n");
+	else printf("false\n");
 	
 	return 0;
 }
