@@ -3,11 +3,11 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main() {
-	int i = 1;
+	int i = 100;
 	
-	while (i <= 100) {
-		printf("Hello, world!\n");
-		i++;
+	while (i > 0) {
+		printf("Hello, world! %d\n", i);
+		i--;
 	}
 	
 	return 0;
