@@ -1,7 +1,8 @@
 #include <stdio.h>
+#include <stdbool.h>	// bool, true, false가 정의된 헤더 파일
 
 int main() {
-	while (1) {		// while에 1을 지정하면 무한루프
+	while (true) {		// while에 true를 지정하면 무한루프
 		printf("Hello, world!\n");
 	}
 	
