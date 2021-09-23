@@ -1,13 +1,15 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
-
 int main() {
-	int i = 100;
+	int count;
 	
-	while (i > 0) {
+	scanf("%d", &count);
+	
+	int i = 0;
+	while (i < count) {
 		printf("Hello, world! %d\n", i);
-		i--;
+		i++;
 	}
 	
 	return 0;
