@@ -2,12 +2,8 @@
 #include <stdio.h>
 
 int main() {
-	int count;
-	
-	//scanf("%d", &count);		//값을 입력받음
-	
-	for(scanf("%d", &count); count > 0; count--){
-		printf("Hello, world! %d\n", count);
+	for (int i=0, j=0; i < 10; i++, j += 2) {
+		printf("i: %d, j: %d\n", i, j);	
 	}
 	
 	return 0;
