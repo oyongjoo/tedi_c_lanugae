@@ -1,10 +1,15 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
 int main() {
-	unsigned char i = 1;
-	while (i != 0) {		// while에 true를 지정하면 무한루프
-		printf("%u\n", i);
-		i <<= 1;
+	int fare;
+	
+	scanf("%d", &fare);
+	
+	while (fare >= 1200) {
+		fare -= 1200;	
+		//if (fare < 0) break;
+		printf("%d\n", fare);
 	}
 	
 	return 0;
