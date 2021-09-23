@@ -5,12 +5,12 @@
 int main() {
 	unsigned char ch;
 	
-	scanf("%hhu", &ch);
+	scanf("%c", &ch);
 	
 	printf("%c\n", ch);
 	
 	for (; ch <= 'z'; ch++) {
-		printf("%hhu", ch);
+		printf("%c", ch);
 	}
 	
 	return 0;
