@@ -1,9 +1,16 @@
+#define __USE_MINGW_ANSI_STDIO 1
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
 int main() {
-	for (int i=0, j=0; i < 10; i++, j += 2) {
-		printf("i: %d, j: %d\n", i, j);	
+	unsigned char ch;
+	
+	scanf("%hhu", &ch);
+	
+	printf("%c\n", ch);
+	
+	for (; ch <= 'z'; ch++) {
+		printf("%hhu", ch);
 	}
 	
 	return 0;
