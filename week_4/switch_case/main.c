@@ -2,12 +2,27 @@
 #include <stdio.h>
 
 int main() {
-	int n, m;
+	int num;
 	
-	scanf("%d %d", &n, &m);
+	scanf("%d", &num);
 	
-	printf("%d\n", (n-m) >= 0 ? n-m : -(n-m) );
-	
+	switch (num) {
+		case 100:
+			printf("PERFECT\n");
+			break;
+		case 90:
+			printf("GREAT\n");
+			break;
+		case 60:
+			printf("GOOD\n");
+			break;
+		case 30:
+			printf("BAD\n");
+			break;
+		default:
+			printf("NICE\n");
+			break;
+	}
 	
 	return 0;
 }
