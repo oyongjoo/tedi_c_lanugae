@@ -2,12 +2,22 @@
 #include <stdio.h>
 
 int main() {
-	int a, b, c;
+	int n, m;
+	char c;
 	
-	scanf("%d %d %d", &a, &b, &c);
+	scanf("%d %d %c", &n, &m, &c);
 	
-	int average = (a+b+c)/3;
-	printf("평균점수: %d - %s\n", average, average >= 60 ? "합격": "불합격");
+	switch (c) {
+		case '+':
+			printf("%d\n", n + m);
+			break;
+		case '-':
+			printf("%d\n", n - m);
+			break;
+		case '*':
+			printf("%d\n", n * m);
+			break;
+	}
 	
 	return 0;
 }
