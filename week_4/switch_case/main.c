@@ -2,27 +2,12 @@
 #include <stdio.h>
 
 int main() {
-	int num;
+	int a, b, c;
 	
-	scanf("%d", &num);
+	scanf("%d %d %d", &a, &b, &c);
 	
-	switch (num) {
-		case 100:
-			printf("PERFECT\n");
-			break;
-		case 90:
-			printf("GREAT\n");
-			break;
-		case 60:
-			printf("GOOD\n");
-			break;
-		case 30:
-			printf("BAD\n");
-			break;
-		default:
-			printf("NICE\n");
-			break;
-	}
+	int average = (a+b+c)/3;
+	printf("평균점수: %d - %s\n", average, average >= 60 ? "합격": "불합격");
 	
 	return 0;
 }
