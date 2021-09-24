@@ -2,22 +2,11 @@
 #include <stdio.h>
 
 int main() {
-	int n, m;
-	char c;
+	int n;
 	
-	scanf("%d %d %c", &n, &m, &c);
+	scanf("%d", &n);
 	
-	switch (c) {
-		case '+':
-			printf("%d\n", n + m);
-			break;
-		case '-':
-			printf("%d\n", n - m);
-			break;
-		case '*':
-			printf("%d\n", n * m);
-			break;
-	}
+	printf("%d", n<<4);
 	
 	return 0;
 }
