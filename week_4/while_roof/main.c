@@ -2,47 +2,18 @@
 #include <stdio.h>
 
 int main() {
-	int a, b, c;
+	unsigned int num1;
+	unsigned int sum = 0;
 	
-	scanf("%d %d %d", &a, &b, &c);
+	scanf("%d", &num1);
 	
-	int middle;
+	unsigned int i = 0;
+	do {
+		sum += i;
+		i++;
+	} while (i <= num1);
 	
-	if (a > b) {
-		if (b > c) 
-			middle = b;
-		else {
-			if (c > a)
-				middle = a;
-			else
-				middle = c;
-		}
-	} else {
-		if (a > c) 
-			middle = a;
-		else
-			if (b>c) {
-				middle = c;
-			} else 
-				middle = b;
-	}
-	printf("%d\n", middle);
-	
-	//if( a > b ) {
-//		if (a > b && b > c) {
-//			printf("%d\n", b);
-//		} else if (a > c && c > b) {
-//			printf("%d\n", c);			
-//		} else if (b > a && a > c) {
-//			printf("%d\n", a);
-//		} else if (b > c && c > a) {
-//			printf("%d\n", c);
-//		} else if (c > a && a > b) {
-//			printf("%d\n", a);
-//		} else if (c > b && b > a) {
-//			printf("%d\n", b);
-//		}
-	//}
+	printf("%u\n", sum);
 	
 	return 0;
 }
