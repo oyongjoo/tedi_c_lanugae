@@ -1,10 +1,26 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
 int main()
 {
-	for (int i = 0; ++i <= 100;)	// 조건식 안에서 변화식을 함께 작성
-		printf(i % 3 ? i % 5 ? "%d\n" : "Buzz\n" : i % 5 ? "Fizz\n" : "BuzzFizz\n", i);
-		// 삼항 연산자를 세 번 사용하여 printf 안에서 처리
-	
+    int num1, num2;
+    
+    scanf("%d %d", &num1, &num2);
+    
+    if (num1 >= num2)
+        return 0;
+    
+    for (int i = num1; i <= num2; i++)
+    {
+        if (i % 5 == 0 && i % 11 == 0)
+            printf("FizzBuzz\n");
+        else if (i % 11 == 0)
+            printf("Buzz\n");
+        else if (i % 5 == 0)
+            printf("Fizz\n");
+        else
+            printf("%d\n", i);
+    }
+    
     return 0;
 }
