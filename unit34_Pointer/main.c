@@ -14,6 +14,7 @@ int main()
     numPtr2 = &num2;    // num2狼 皋葛府 林家 历厘
     cPtr1 = &c1;        // c1狼 皋葛府 林家 历厘
 
+	printf("%d, %d\n", sizeof(cPtr1), sizeof(*cPtr1));
     printf("%lld\n", *numPtr1);    // 10
     printf("%f\n", *numPtr2);      // 3.500000
     printf("%c\n", *cPtr1);        // a
