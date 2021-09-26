@@ -2,14 +2,20 @@
 
 int main()
 {
-	const int num1 = 10;
-	const int num2 = 30;
-	int * const snumPtr = &num1;
+	int num1 = 10;
+	char c1 = 'a';
+	int *numPtr1 = &num1;
+	char *cPtr1 = &c1;
 	
-	numPtr = &num2;
-	*numPtr = 20;   
+	void *ptr;
 	
-	printf("%#x, %d\n", numPtr, *numPtr);
-
-    return 0;
+	ptr = numPtr1;
+	printf("%d\n", *ptr);
+	ptr = cPtr1;
+	printf("%d\n", *ptr);
+	
+	numPtr1 = ptr;
+	cPtr1 = ptr;
+	
+	return 0;
 }
