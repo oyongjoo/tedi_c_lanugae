@@ -4,13 +4,13 @@
 
 int main()
 {
-	long long *numPtr = malloc(sizeof(long long));
+	int *numPtr1 = NULL;
 	
-	memset(numPtr, 0x27, 8);
+	if (numPtr1 == NULL) {
+		numPtr1 = malloc(1024);
+	}
 	
-	printf("%#llx\n", *numPtr);
-	
-	free(numPtr);
+	printf("%#p\n", numPtr1);
 
     return 0;
 }
