@@ -2,20 +2,16 @@
 
 int main()
 {
+	int *numPtr1;
+	int **numPtr2;
 	int num1 = 10;
-	char c1 = 'a';
-	int *numPtr1 = &num1;
-	char *cPtr1 = &c1;
 	
-	void *ptr;
+	numPtr1 = &num1;
+	numPtr2 = &numPtr1;
 	
-	ptr = numPtr1;
-	printf("%d\n", *ptr);
-	ptr = cPtr1;
-	printf("%d\n", *ptr);
+	**numPtr2 = 20;
 	
-	numPtr1 = ptr;
-	cPtr1 = ptr;
+	printf("%d, %d\n", **numPtr2, num1);
 	
 	return 0;
 }
