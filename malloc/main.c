@@ -1,16 +1,24 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-#include <stdlib.h>    // malloc, free 함수가 선언된 헤더 파일
-#include <string.h>
+#include <stdlib.h>
 
 int main()
 {
-	int *numPtr1 = NULL;
-	
-	if (numPtr1 == NULL) {
-		numPtr1 = malloc(1024);
-	}
-	
-	printf("%#p\n", numPtr1);
+    int num1;
+    int num2;
+
+	int *numPtr1 = malloc(sizeof(int));
+	int *numPtr2 = malloc(sizeof(int));
+
+    scanf("%d %d", &num1, &num2);
+
+    *numPtr1 = num1;
+    *numPtr2 = num2;
+
+    printf("%d\n", *numPtr1 + *numPtr2);
+
+    free(numPtr1);
+    free(numPtr2);
 
     return 0;
 }
