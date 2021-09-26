@@ -4,7 +4,7 @@ int main()
 {
 	const int num1 = 10;
 	const int num2 = 30;
-	const int *snumPtr = &num1;
+	int * const snumPtr = &num1;
 	
 	numPtr = &num2;
 	*numPtr = 20;   
