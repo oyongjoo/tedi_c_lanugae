@@ -2,22 +2,28 @@
 
 int main()
 {
-    int numArr[10] = { 11, 22, 33, 44, 55, 66, 77, 88, 99, 110 };    // 크기가 10인 int형 배열
+    int decimal = 13;
+    int binary[20] = { 0, };
 
-    int *numPtr = numArr;       // 포인터에 int형 배열을 할당
+    int position = 0;
+    while (1)
+    {
+        binary[position] = decimal % 2;    // 2로 나누었을 때 나머지를 배열에 저장
+        decimal = decimal / 2;             // 2로 나눈 몫을 저장
 
-    printf("%d\n", *numPtr);    // 11: 배열의 주소가 들어있는 포인터를 역참조하면 배열의 
-                                // 첫 번째 요소에 접근
+        position++;    // 자릿수 변경
 
-    printf("%d\n", *numArr);    // 11: 배열 자체를 역참조해도 배열의 첫 번째 요소에 접근
+        if (decimal == 0)    // 몫이 0이 되면 반복을 끝냄
+            break;
+    }
 
-    printf("%d\n", numPtr[5]);  // 66: 배열의 주소가 들어있는 포인터는 인덱스로 접근할 수 있음
+    // 배열의 요소를 역순으로 출력
+    for (int i = position - 1; i >= 0; i--)
+    {
+        printf("%d", binary[i]);
+    }
 
-    printf("%d\n", sizeof(numArr));    // 40: sizeof로 배열의 크기를 구하면 배열이 메모리에 
-                                       // 차지하는 공간이 출력됨
-
-    printf("%d\n", sizeof(numPtr));    // 4 : sizeof로 배열의 주소가 들어있는 포인터의 크기를 
-                                       // 구하면 포인터의 크기가 출력됨(64비트라면 8)
+    printf("\n");
 
     return 0;
 }
